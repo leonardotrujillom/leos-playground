@@ -1,0 +1,8 @@
+{
+  "name": "plygrnd-backend",
+  "version": "1.0.0",
+  "main": "app.ts",
+  "repository": "https://github.com/leonardotrujillom/leos-playground.git",
+  "author": "Leonardo Trujillo",
+  "license": "MIT"
+}
