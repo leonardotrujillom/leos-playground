@@ -13,11 +13,25 @@ mongoose.connect(uri, (err) => {
 });
 
 exports.UserSchema = new mongoose.Schema({
-    id: Number,
-    username: String,
-    displayName: String,
-    emailAddress: String,
-    imageUrl: String,
+    firstName: String,
+    lastName: String,
+    email: String,
+
+    accounts: [
+        { 
+            kind: "internal",
+            username: String,
+            password: String
+        },
+        {
+            kind: "google",
+            id: String
+        },
+        {
+            kind: "o365",
+            id: String
+        }
+    ],
     
     isActive: Boolean
 }, {timestamps: true});
